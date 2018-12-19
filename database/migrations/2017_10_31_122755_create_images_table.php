@@ -21,8 +21,20 @@ class CreateImagesTable extends Migration
             $table->string('description')->nullable();
             $table->boolean('adult')->default(false);
             $table->integer ('clicks')->unsigned()->default(0);
+            $table->integer('camera_id')->unsigned()->nullable();
+
+
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('camera_id')->references('id')->on('cameras')->onDelete('set null');
+
+
+
+
+
+
+
+
             $table->timestamps();
         });
     }

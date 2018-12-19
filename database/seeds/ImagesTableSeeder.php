@@ -20,6 +20,7 @@ class ImagesTableSeeder extends Seeder
             0 => 
             array (
                 'category_id' => 1,
+                'camera_id' => 1,
                 'user_id' => 1,
                 'name' => '3sj1TeoL6HL09nPktQulHnhcwUXgvpwJmzRMf51v.jpeg',
                 'description' => NULL,
@@ -29,6 +30,7 @@ class ImagesTableSeeder extends Seeder
             1 => 
             array (
                 'category_id' => 1,
+                'camera_id' => 1,
                 'user_id' => 1,
                 'name' => 'VV1xiNlGP4cL9NfIgihfqzaJA2bi78yeL5nUTQLV.jpeg',
                 'description' => NULL,
@@ -38,6 +40,7 @@ class ImagesTableSeeder extends Seeder
             2 => 
             array (
                 'category_id' => 1,
+                'camera_id' => 1,
                 'user_id' => 1,
                 'name' => 'BfDDgBAHcvkE6mQGwfWKXfeIfCl83ILXIBo6Pe8q.jpeg',
                 'description' => NULL,
@@ -47,6 +50,7 @@ class ImagesTableSeeder extends Seeder
             3 => 
             array (
                 'category_id' => 1,
+                'camera_id' => 1,
                 'user_id' => 1,
                 'name' => '3MSTnvfn75zX33rWrR3Ws6GlofNEnoZeyr2OgUKM.jpeg',
                 'description' => NULL,
@@ -56,6 +60,7 @@ class ImagesTableSeeder extends Seeder
             4 => 
             array (
                 'category_id' => 1,
+                'camera_id' => 1,
                 'user_id' => 1,
                 'name' => '2UjOECak0kwKsJ2cccxuhWTtyEBhYNIM5wWDyZqH.jpeg',
                 'description' => 'La mer',
@@ -65,6 +70,7 @@ class ImagesTableSeeder extends Seeder
             5 => 
             array (
                 'category_id' => 1,
+                'camera_id' => 1,
                 'user_id' => 1,
                 'name' => 'sz2yd6NfuoMNr00WTRptvmwYFmKwo0tJDqtcFGe2.jpeg',
                 'description' => 'L\'herbe',
@@ -74,6 +80,7 @@ class ImagesTableSeeder extends Seeder
             6 => 
             array (
                 'category_id' => 1,
+                'camera_id' => 1,
                 'user_id' => 1,
                 'name' => '4sWqRZUpPXy116xDzIHQ0Qhv2mXz23gf8SXGNbap.jpeg',
                 'description' => 'Sinuosité',
@@ -83,6 +90,7 @@ class ImagesTableSeeder extends Seeder
             7 => 
             array (
                 'category_id' => 1,
+                'camera_id' => 1,
                 'user_id' => 1,
                 'name' => 'wmOGR8ux0Pm3zn0WCzXCotdoApFDAbKr9dnqyloN.jpeg',
                 'description' => NULL,
@@ -92,6 +100,7 @@ class ImagesTableSeeder extends Seeder
             8 => 
             array (
                 'category_id' => 1,
+                'camera_id' => 1,
                 'user_id' => 1,
                 'name' => '6r8AoqKWgpCDYxAh78StInTEwGARuhF73zu6bpcj.jpeg',
                 'description' => NULL,
@@ -101,6 +110,7 @@ class ImagesTableSeeder extends Seeder
             9 => 
             array (
                 'category_id' => 2,
+                'camera_id' => 1,
                 'user_id' => 2,
                 'name' => 'mXaC2iOUcB4HBlEpCdE4MObRbslB5DeFe2YJB19u.jpeg',
                 'description' => NULL,
@@ -110,6 +120,7 @@ class ImagesTableSeeder extends Seeder
             10 => 
             array (
                 'category_id' => 2,
+                'camera_id' => 1,
                 'user_id' => 2,
                 'name' => 'gBQ6AQG7IPkFk2GwJUwBkkjA3hQhqch2q0XVCzGV.jpeg',
                 'description' => 'Une belle maison',
@@ -119,6 +130,7 @@ class ImagesTableSeeder extends Seeder
             11 => 
             array (
                 'category_id' => 2,
+                'camera_id' => 1,
                 'user_id' => 2,
                 'name' => 'y9Ts9KwWcItVzsdm7qMmQ1PYQxSdSkagbiX9AJTv.jpeg',
                 'description' => NULL,
@@ -128,6 +140,7 @@ class ImagesTableSeeder extends Seeder
             12 => 
             array (
                 'category_id' => 2,
+                'camera_id' => 1,
                 'user_id' => 2,
                 'name' => 'P3ZzfsbzFo7yIdxlDZrSftK98OoduvN21yLuvlZL.jpeg',
                 'description' => NULL,
@@ -137,6 +150,7 @@ class ImagesTableSeeder extends Seeder
             13 => 
             array (
                 'category_id' => 2,
+                'camera_id' => 1,
                 'user_id' => 2,
                 'name' => 'yRxsYGSbamfRgqZNDiPEvaBDxwK34M0zC3phlGJ3.jpeg',
                 'description' => NULL,
@@ -146,6 +160,7 @@ class ImagesTableSeeder extends Seeder
             14 => 
             array (
                 'category_id' => 2,
+                'camera_id' => 1,
                 'user_id' => 2,
                 'name' => 'rSCTOastoigOjZhW4sx7nFVj5LaYLn2ySBnlgYrR.jpeg',
                 'description' => NULL,
@@ -155,6 +170,7 @@ class ImagesTableSeeder extends Seeder
             15 => 
             array (
                 'category_id' => 2,
+                'camera_id' => 1,
                 'user_id' => 2,
                 'name' => 'JUCMBZC6ASfZYwkTYBUxxhLkFTqzqAhSK4FplErG.jpeg',
                 'description' => NULL,
@@ -164,6 +180,7 @@ class ImagesTableSeeder extends Seeder
             16 => 
             array (
                 'category_id' => 3,
+                'camera_id' => 1,
                 'user_id' => 2,
                 'name' => 'Js3ySYSWZ1asA83MoYXwScXbxsmm5tqkWQi53qIv.jpeg',
                 'description' => NULL,
@@ -173,6 +190,7 @@ class ImagesTableSeeder extends Seeder
             17 => 
             array (
                 'category_id' => 3,
+                'camera_id' => 1,
                 'user_id' => 2,
                 'name' => 'qWPiahkNQELGY0blXoGJZlKKzZOmRJwCwVSehI1w.jpeg',
                 'description' => NULL,
@@ -182,6 +200,7 @@ class ImagesTableSeeder extends Seeder
             18 => 
             array (
                 'category_id' => 3,
+                'camera_id' => 1,
                 'user_id' => 2,
                 'name' => 'YBJeUe497lXvBLGZT4cgXAhKTLTsERXE3ajIJ3Re.jpeg',
                 'description' => 'De jolis enfants',
@@ -191,6 +210,7 @@ class ImagesTableSeeder extends Seeder
             19 => 
             array (
                 'category_id' => 3,
+                'camera_id' => 1,
                 'user_id' => 2,
                 'name' => 'zmBN6b2OUBTTop8xZ5QIiV3UY7APIcO6yEGWQA6y.jpeg',
                 'description' => 'Surprenant',
@@ -200,6 +220,7 @@ class ImagesTableSeeder extends Seeder
             20 => 
             array (
                 'category_id' => 3,
+                'camera_id' => 1,
                 'user_id' => 2,
                 'name' => '3HbilNZTQvPr2tHI5AMXnN1jmvYZoaAn0cQEaOZb.jpeg',
                 'description' => NULL,
@@ -209,6 +230,7 @@ class ImagesTableSeeder extends Seeder
             21 => 
             array (
                 'category_id' => 3,
+                'camera_id' => 1,
                 'user_id' => 2,
                 'name' => 'keWNVr44gopb98aFO995QbRsCvlJ6njhT5oIhJfn.jpeg',
                 'description' => NULL,
@@ -218,6 +240,7 @@ class ImagesTableSeeder extends Seeder
             22 => 
             array (
                 'category_id' => 3,
+                'camera_id' => 1,
                 'user_id' => 2,
                 'name' => 'G8sa7JCWN5UOXL2ngHv9IAF1k1Vwb6lRK8NlHkGy.jpeg',
                 'description' => 'De dos',
@@ -227,6 +250,7 @@ class ImagesTableSeeder extends Seeder
             23 => 
             array (
                 'category_id' => 3,
+                'camera_id' => 1,
                 'user_id' => 2,
                 'name' => 'gqD6Bjha8B69bEIY7yi1XyIifCAy53MKWDZRBPJW.jpeg',
                 'description' => NULL,
@@ -236,6 +260,7 @@ class ImagesTableSeeder extends Seeder
             24 => 
             array (
                 'category_id' => 3,
+                'camera_id' => 1,
                 'user_id' => 2,
                 'name' => 'YfXTXqaHurMIULEfEL9vA4mqQKRG8ZgDHgKr6nZN.jpeg',
                 'description' => NULL,
@@ -245,6 +270,7 @@ class ImagesTableSeeder extends Seeder
             25 => 
             array (
                 'category_id' => 4,
+                'camera_id' => 1,
                 'user_id' => 1,
                 'name' => 'S9WtoDV5Dyij3esSRY3MxiUmGB1tfE4skTWpALBj.jpeg',
                 'description' => 'Un chat',
@@ -254,6 +280,7 @@ class ImagesTableSeeder extends Seeder
             26 => 
             array (
                 'category_id' => 4,
+                'camera_id' => 1,
                 'user_id' => 1,
                 'name' => 'tDVKEo5XLRNsbpaqexY41NfbtC8GC7Now40MoOEO.jpeg',
                 'description' => NULL,
@@ -263,6 +290,7 @@ class ImagesTableSeeder extends Seeder
             27 => 
             array (
                 'category_id' => 4,
+                'camera_id' => 1,
                 'user_id' => 1,
                 'name' => 'ZXFuKBzvFZEksqm0EHrXRUpxbOusMjqv2Sssumjt.jpeg',
                 'description' => NULL,
@@ -272,6 +300,7 @@ class ImagesTableSeeder extends Seeder
             28 => 
             array (
                 'category_id' => 4,
+                'camera_id' => 1,
                 'user_id' => 1,
                 'name' => 'he4OTnctIbcUbAinFHVgDMPTi56AHZRo8R7I3E37.jpeg',
                 'description' => 'Un oiseau',
@@ -281,6 +310,7 @@ class ImagesTableSeeder extends Seeder
             29 => 
             array (
                 'category_id' => 4,
+                'camera_id' => 1,
                 'user_id' => 1,
                 'name' => '4HLSmsLVmmyotWILhlfaNfwMHw8dyH5zDKlY8PzW.jpeg',
                 'description' => NULL,
@@ -290,6 +320,7 @@ class ImagesTableSeeder extends Seeder
             30 => 
             array (
                 'category_id' => 4,
+                'camera_id' => 1,
                 'user_id' => 2,
                 'name' => 'hVCKABCaItIPhop9nQZBoZb7CFFwgGCYYTLgQEvE.jpeg',
                 'description' => NULL,
@@ -299,6 +330,7 @@ class ImagesTableSeeder extends Seeder
             31 => 
             array (
                 'category_id' => 4,
+                'camera_id' => 1,
                 'user_id' => 2,
                 'name' => 'RvlsdZqwNw6fIWoQCsb13uFw1W4DiDRHuU4tZONT.jpeg',
                 'description' => NULL,
@@ -308,6 +340,7 @@ class ImagesTableSeeder extends Seeder
             32 => 
             array (
                 'category_id' => 4,
+                'camera_id' => 1,
                 'user_id' => 2,
                 'name' => 'lnCVyC69sLeu5ZPV1isNLvUzY5jAYoEsfjTpVPPK.jpeg',
                 'description' => 'Un peu dangereux',
@@ -317,6 +350,7 @@ class ImagesTableSeeder extends Seeder
             33 => 
             array (
                 'category_id' => 5,
+                'camera_id' => 1,
                 'user_id' => 2,
                 'name' => '7k55hgNZs0cW2SuDeJWUDUxhLLlhEwPiK6XgewnA.jpeg',
                 'description' => NULL,
@@ -326,6 +360,7 @@ class ImagesTableSeeder extends Seeder
             34 => 
             array (
                 'category_id' => 5,
+                'camera_id' => 1,
                 'user_id' => 2,
                 'name' => 'RIPqCFrTB8dZ9KEv401egPQsgnbCHSbmhZhNVIVQ.jpeg',
                 'description' => NULL,
@@ -335,6 +370,7 @@ class ImagesTableSeeder extends Seeder
             35 => 
             array (
                 'category_id' => 5,
+                'camera_id' => 1,
                 'user_id' => 1,
                 'name' => 'N6q18GObVpFi6WfiQSdUxPBLy2Jmwkg7gfOGKvKF.jpeg',
                 'description' => 'Des champignons',
@@ -344,6 +380,7 @@ class ImagesTableSeeder extends Seeder
             36 => 
             array (
                 'category_id' => 5,
+                'camera_id' => 1,
                 'user_id' => 1,
                 'name' => 'UJD6RAWLUdtChrOtxskfu6GGDfp8YXNKSQfCRe6W.jpeg',
                 'description' => 'De jolies couleurs',
@@ -353,6 +390,7 @@ class ImagesTableSeeder extends Seeder
             37 => 
             array (
                 'category_id' => 5,
+                'camera_id' => 1,
                 'user_id' => 1,
                 'name' => 'GGyL5zI8kfme4A8xl3F6mgh0AxMPfwUaTwhbtm4U.jpeg',
                 'description' => NULL,
@@ -362,6 +400,7 @@ class ImagesTableSeeder extends Seeder
             38 => 
             array (
                 'category_id' => 5,
+                'camera_id' => 1,
                 'user_id' => 1,
                 'name' => '9ZEDXKJLPYvDdGPczO4a4kCUPGaZok8JFjQsGCRw.jpeg',
                 'description' => NULL,
@@ -371,6 +410,7 @@ class ImagesTableSeeder extends Seeder
             39 => 
             array (
                 'category_id' => 5,
+                'camera_id' => 1,
                 'user_id' => 1,
                 'name' => 'fBIiuxLTaSfxAl3dVNkd1PpWQmG6ViygHHggItoF.jpeg',
                 'description' => 'Etrange',
@@ -380,6 +420,7 @@ class ImagesTableSeeder extends Seeder
             40 => 
             array (
                 'category_id' => 5,
+                'camera_id' => 1,
                 'user_id' => 1,
                 'name' => 'bxMEx118C5GgnDaiPV7nF6VrHMEWF7OKjcE93BgA.jpeg',
                 'description' => NULL,
@@ -389,6 +430,7 @@ class ImagesTableSeeder extends Seeder
             41 => 
             array (
                 'category_id' => 1,
+                'camera_id' => 1,
                 'user_id' => 1,
                 'name' => 'skr0EXFlqSR3FHEKq7KDCZ6wfFnibJBi83LYggaM.jpeg',
                 'description' => NULL,
@@ -398,6 +440,7 @@ class ImagesTableSeeder extends Seeder
             42 => 
             array (
                 'category_id' => 1,
+                'camera_id' => 1,
                 'user_id' => 1,
                 'name' => 'YMCLTLsLZjNjNfbDg1Ljpz3KjA8bCof7iQMtukTc.jpeg',
                 'description' => NULL,

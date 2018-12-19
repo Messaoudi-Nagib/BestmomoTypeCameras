@@ -14,6 +14,12 @@ class Image extends Model
         return $this->belongsTo (Category::class);
     }
 
+    public function camera(){
+        return $this->belongsTo(Camera::class);
+    }
+
+
+
     /**
      * Get the album that owns the image.
      */
@@ -49,9 +55,9 @@ class Image extends Model
         $user = auth()->user();
 
         if($user && $user->adult) {
-            return $query->with ('users', 'user')->latest ();
+            return $query->with ('users', 'user','camera')->latest ();
         }
 
-        return $query->with ('users', 'user')->whereAdult(false)->latest ();
+        return $query->with ('users', 'user','camera')->whereAdult(false)->latest ();
     }
 }

@@ -10,6 +10,7 @@
     @yield('css')
 </head>
 <body>
+
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="{{ route('home') }}">{{ config('app.name', 'Album') }}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -37,10 +38,11 @@
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle
-                    @isset($category) 
-                        {{ currentRoute(route('category', $category->slug)) }}
-                    @endisset
-                    " href="#" id="navbarDropdownCat" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    @isset($category)
+                {{ currentRoute(route('category', $category->slug)) }}
+                @endisset
+                    " href="#" id="navbarDropdownCat" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
                     @lang('Catégories')
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownCat">
@@ -49,20 +51,37 @@
                            href="{{ route('category', $category->slug) }}">{{ $category->name }}</a>
                     @endforeach
                 </div>
+
             </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle
+                    " href="#" id="navbarDropdownCat" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    @lang('Types de camera')
+                </a>
+
+
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownCat">
+                    @foreach($cameras as $camera)
+
+                        <a class="dropdown-item"
+                           href="{{ route('camera.show', $camera->id) }}">{{ $camera->name }}</a>
+                    @endforeach
+                </div>
             @isset($albums)
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle
-                        @isset($album) 
-                            {{ currentRoute(route('album', $album->slug))}}
-                        @endisset
-                        " href="#" id="navbarDropdownAlbum" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        @isset($album)
+                    {{ currentRoute(route('album', $album->slug))}}
+                    @endisset
+                        " href="#" id="navbarDropdownAlbum" role="button" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">
                         @lang('Albums')
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownAlbum">
                         @foreach($albums as $album)
                             <a class="dropdown-item"
-                            href="{{ route('album', $album->slug) }}">{{ $album->name }}</a>
+                               href="{{ route('album', $album->slug) }}">{{ $album->name }}</a>
                         @endforeach
                     </div>
                 </li>
@@ -105,9 +124,9 @@
                                         route('album.create'),
                                         route('image.create'),
                                         route('album.index')
-                                    )}}" 
-                    href="#" id="navbarDropdownGestAlbum" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
+                                    )}}"
+                       href="#" id="navbarDropdownGestAlbum" role="button" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
                         @lang('Gestion')
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownGestAlbum">
@@ -120,7 +139,17 @@
                         <a class="dropdown-item" href="{{ route('album.index') }}">
                             <i class="fas fa-wrench fa-lg"></i> @lang('Gérer les albums')
                         </a>
+                        <a class="dropdown-item" href="{{ route('camera.create') }}">
+                            <i class="fas fa-plus fa-lg"></i> @lang('Ajouter un type de caméra')
+                        </a>
+                        <a class="dropdown-item" href="{{ route('camera.index') }}">
+                            <i class="fas fa-wrench fa-lg"></i> @lang('Gérer les types de caméra')
+                        </a>
                     </div>
+                </li>
+
+
+
                 </li>
             @endauth
         </ul>
@@ -134,20 +163,22 @@
                 </li>
             @else
                 @maintenance
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('maintenance.index') }}" data-toggle="tooltip" title="@lang('Mode maintenance')">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('maintenance.index') }}" data-toggle="tooltip"
+                       title="@lang('Mode maintenance')">
                             <span class="fas fa-exclamation-circle  fa-lg" style="color: red;">
 
                             </span>
-                        </a>
-                    </li>
+                    </a>
+                </li>
                 @endmaintenance
                 @unless(auth()->user()->unreadNotifications->isEmpty())
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('notification.index') }}">
                             <span class="fa-layers fa-fw">
                                 <span style="color: yellow" class="fas fa-bell fa-lg" data-fa-transform="grow-2"></span>
-                                <span class="fa-layers-text fa-inverse" data-fa-transform="shrink-4 up-2 left-1" style="color: black; font-weight:900">{{ auth()->user()->unreadNotifications->count() }}</span>
+                                <span class="fa-layers-text fa-inverse" data-fa-transform="shrink-4 up-2 left-1"
+                                      style="color: black; font-weight:900">{{ auth()->user()->unreadNotifications->count() }}</span>
                             </span>
                         </a>
                     </li>
@@ -185,7 +216,8 @@
 <nav class="navbar navbar-expand fixed-bottom navbar-dark bg-dark">
     <div class="navbar-nav ml-auto">
         <a class="nav-item nav-link {{ currentUrl('legal') }}" href="{{ url('legal') }}">@lang('Mentions légales')</a>
-        <a class="nav-item nav-link {{ currentUrl('privacy') }}" href="{{ url('privacy') }}">@lang('Politique de confidentialité')</a>
+        <a class="nav-item nav-link {{ currentUrl('privacy') }}"
+           href="{{ url('privacy') }}">@lang('Politique de confidentialité')</a>
     </div>
 </nav>
 

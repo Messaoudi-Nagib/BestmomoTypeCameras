@@ -7,7 +7,7 @@ use App\Models\ {
     User, Image
 };
 use App\Repositories\ {
-    ImageRepository, NotificationRepository, AlbumRepository, CategoryRepository
+    ImageRepository, NotificationRepository, AlbumRepository, CategoryRepository, CameraRepository
 };
 use App\Notifications\ImageRated;
 
@@ -41,6 +41,11 @@ class ImageController extends Controller
      * @param  \App\Repositories\AlbumRepository $albumRepository
      * @param  \App\Repositories\CategoryRepository $categoryRepository
      */
+
+
+    protected $cameraRepository;
+
+
     public function __construct(
         ImageRepository $imageRepository,
         AlbumRepository $albumRepository,
@@ -66,6 +71,8 @@ class ImageController extends Controller
 
         return view ('images.albums', compact('albums', 'image'));
     }
+
+
 
     /**
      * Update the specified resource in storage.
@@ -153,6 +160,7 @@ class ImageController extends Controller
         $request->validate ([
             'image' => 'required|image|max:2000',
             'category_id' => 'required|exists:categories,id',
+            'camera_id' => 'exists:cameras,id', //On verifie si la valeur de l'input existe dans la table camera dans le champ id
             'description' => 'nullable|string|max:255',
         ]);
 
@@ -173,6 +181,14 @@ class ImageController extends Controller
         $images = $this->imageRepository->getImagesForCategory ($slug);
 
         return view ('home', compact ('category', 'images'));
+    }
+
+    public function camera($slug)
+    {
+        $camera = $this->CameraRepository->getBySlug ($slug);
+        $images = $this->imageRepository->getImagesForCategory ($slug);
+
+        return view ('home', compact ('camera', 'images'));
     }
 
     /**

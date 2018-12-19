@@ -14,6 +14,7 @@ Route::middleware ('admin')->group (function () {
         'only' => ['index', 'edit', 'update', 'destroy']
     ]);
 
+
     Route::name ('orphans.')->prefix('orphans')->group(function () {
         Route::name ('index')->get ('/', 'AdminController@orphans');
         Route::name ('destroy')->delete ('/', 'AdminController@destroy');
@@ -28,7 +29,11 @@ Route::middleware ('admin')->group (function () {
 Route::middleware ('auth', 'verified')->group (function () {
 
     Route::resource ('image', 'ImageController', [
-        'only' => ['create', 'store', 'destroy', 'update']
+        'only' => ['create', 'store', 'destroy', 'update' , 'camera']
+    ]);
+
+    Route::resource ('camera', 'CameraController', [
+        'only' => ['index','create', 'store', 'destroy', 'update', 'edit' ,'show']
     ]);
 
     Route::resource ('profile', 'ProfileController', [
@@ -54,6 +59,7 @@ Route::middleware ('auth', 'verified')->group (function () {
         Route::name ('index')->get ('/', 'NotificationController@index');
         Route::name ('update')->patch ('{notification}', 'NotificationController@update');
     });
+
 });
 
 Route::name ('album')->get ('album/{slug}', 'ImageController@album');
@@ -61,6 +67,8 @@ Route::name ('category')->get ('category/{slug}', 'ImageController@category');
 Route::name ('user')->get ('user/{user}', 'ImageController@user');
 Route::name ('language')->get ('language/{lang}', 'HomeController@language');
 Route::middleware('ajax')->name('image.click')->patch('image/{image}/click', 'ImageController@click');
+
+
 
 Route::view ('/legal', 'legal');
 Route::view ('/privacy', 'privacy');

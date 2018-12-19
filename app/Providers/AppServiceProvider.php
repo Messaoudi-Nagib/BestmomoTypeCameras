@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
-use App\Repositories\ { CategoryRepository, AlbumRepository };
+use App\Repositories\ { CategoryRepository, AlbumRepository, CameraRepository };
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -40,7 +40,9 @@ class AppServiceProvider extends ServiceProvider
                     }
                 }
             });
+            view()->share('cameras', resolve(CameraRepository::class)->getAll());
         }
+
     }
 
     /**

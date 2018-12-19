@@ -66,6 +66,9 @@
                             <div id="{{ $image->id . '.1' }}" data-toggle="tooltip" title="1" @if($image->rate > 0) class="star-yellow" @endif>
                                 <i class="fas fa-star"></i>
                             </div>
+
+
+
                             <span class="pull-right">
                                 @adminOrOwner($image->user_id)
                                     <a class="toggleIcons"
@@ -105,6 +108,14 @@
                                            <i class="fa @if($image->adult) fa-graduation-cap @else fa-child @endif"></i>
                                         </a>
                                     </span>
+                                <div class="type-camera">
+                                    @isset($image->camera)
+                                    <p>
+
+                                    {{$image->camera->name}}
+                                </p>
+                                    @endisset
+                                </div>
                                     <form action="{{ route('image.destroy', $image->id) }}" method="POST" class="hide">
                                         @csrf
                                         @method('DELETE')
