@@ -53,6 +53,11 @@
                 </div>
 
             </li>
+                <a class="nav-link" href="{{ route('commerce.index') }}">
+                    @lang('Afficher la partie e-commerce')
+                </a>
+
+
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle
                     " href="#" id="navbarDropdownCat" role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -66,6 +71,20 @@
 
                         <a class="dropdown-item"
                            href="{{ route('camera.show', $camera->id) }}">{{ $camera->name }}</a>
+                    @endforeach
+                </div>
+
+                <a class="nav-link dropdown-toggle
+                    " href="#" id="navbarDropdownCat" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    @lang('Pays')
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownCat">
+                    @foreach($pays as $unpays)
+
+                        <a class="dropdown-item"
+                           href="{{ route('camera.show', $unpays->id) }}">{{ $unpays->libelle }}</a>
                     @endforeach
                 </div>
             @isset($albums)

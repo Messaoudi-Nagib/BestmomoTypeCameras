@@ -23,6 +23,8 @@ class CreateUsersTable extends Migration
             $table->json('settings');
             $table->rememberToken();
             $table->timestamps();
+
+
         });
     }
 

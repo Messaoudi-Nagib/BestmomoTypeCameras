@@ -26,6 +26,8 @@ Route::middleware ('admin')->group (function () {
     });
 });
 
+
+
 Route::middleware ('auth', 'verified')->group (function () {
 
     Route::resource ('image', 'ImageController', [
@@ -44,6 +46,8 @@ Route::middleware ('auth', 'verified')->group (function () {
     Route::resource ('album', 'AlbumController', [
         'except' => 'show'
     ]);
+
+    Route::resource('commerce', 'CommerceController');
 
     Route::name ('image.')->middleware ('ajax')->group (function () {
         Route::prefix('image')->group(function () {

@@ -5,10 +5,10 @@
     @component('components.card')
 
         @slot('title')
-            @lang('Ajouter une image')
+            @lang('Ajouter une vente')
         @endslot
 
-        <form method="POST" action="{{ route('image.store') }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ route('commerce.store') }}" enctype="multipart/form-data">
             @csrf
 
             <div class="form-group{{ $errors->has('image') ? ' is-invalid' : '' }}">
@@ -30,22 +30,11 @@
             </div>
 
             <div class="form-group">
-                <label for="category_id">@lang('Catégorie')</label>
-                <select id="category_id" name="category_id" class="form-control">
-                    @foreach($categories as $category)
-                        <option value="{{ $category->id }}">{{ $category->name }}</option>
-                    @endforeach
-                </select>
+                <label for="prix">@lang('Prix')</label>
+                <input for="prix" name="prix" id="prix" class="form-control">
             </div>
 
-            <div class="form-group">
-                <label for="type_cam">@lang('Type de caméra utilisé (optionel)')</label>
-                <select id="" name="camera_id" class="form-control">
-                    @foreach($cameras as $cam)
-                        <option value="{{ $cam->id }}">{{ $cam->name }}</option>
-                    @endforeach
-                </select>
-            </div>
+
 
             @include('partials.form-group', [
                 'title' => __('Description (optionnelle)'),
@@ -54,18 +43,14 @@
                 'required' => false,
                 ])
 
-            <div class="form-group">
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="adult" name="adult">
-                    <label class="custom-control-label" for="adult"> @lang('Contenu adulte')</label>
-                </div>
-            </div>
+
+
 
             @component('components.button')
                 @lang('Envoyer')
             @endcomponent
 
-        </form>g
+        </form>
 
     @endcomponent
 

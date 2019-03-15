@@ -115,6 +115,11 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->role === 'admin';
     }
 
+
+    public function commerce(){
+        return $this->hasMany(Commerce::class);
+    }
+
     /**
      * Set the adult attribute.
      *
