@@ -91,7 +91,7 @@
                                     </span>
                                 <div class="type-camera">
                                 <p>
-                                    {{$image->camera->name}}
+                                    <span class="badge badge-pill badge-dark">{{$image->camera->name}}</span>
                                 </p>
                                 </div>
                                     <form action="{{ route('image.destroy', $image->id) }}" method="POST" class="hide">

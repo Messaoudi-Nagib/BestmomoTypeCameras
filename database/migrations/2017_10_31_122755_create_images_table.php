@@ -1,5 +1,6 @@
 <?php
 
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
@@ -22,6 +23,10 @@ class CreateImagesTable extends Migration
             $table->boolean('adult')->default(false);
             $table->integer ('clicks')->unsigned()->default(0);
             $table->integer('camera_id')->unsigned()->nullable();
+            $table->integer('prix_depart')->unsigned()->nullable();
+            $table->date('date_fin')->nullable();
+
+
 
 
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');

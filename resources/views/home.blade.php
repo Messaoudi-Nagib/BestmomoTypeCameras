@@ -112,10 +112,27 @@
                                     @isset($image->camera)
                                     <p>
 
-                                    {{$image->camera->name}}
+                                        <span class="badge badge-pill badge-dark">{{ $image->camera->name }}</span>
                                 </p>
                                     @endisset
                                 </div>
+                                <div class="type-encheres">
+                                        <p>
+
+                                        <span class="badge badge-pill badge-dark">Date de fin : {{$image->date_fin }}</span>
+                                </p>
+                                </div>
+
+                                <div class="type-encheres">
+                                        <p>
+
+                                        <span class="badge badge-pill badge-dark"><a href="{{ route('encheres.create') }}" Prix de départ : {{$image->prix_depart }}</span>
+                                </p>
+                                </div>
+
+
+
+
                                     <form action="{{ route('image.destroy', $image->id) }}" method="POST" class="hide">
                                         @csrf
                                         @method('DELETE')

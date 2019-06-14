@@ -26,6 +26,8 @@ Route::middleware ('admin')->group (function () {
     });
 });
 
+Route::get('encheres.create', 'EnchereController@create');
+
 Route::middleware ('auth', 'verified')->group (function () {
 
     Route::resource ('image', 'ImageController', [

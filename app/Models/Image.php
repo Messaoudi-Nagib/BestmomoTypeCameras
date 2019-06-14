@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Enchere;
 use Illuminate\Database\Eloquent\Model;
 
 class Image extends Model
@@ -16,6 +17,11 @@ class Image extends Model
 
     public function camera(){
         return $this->belongsTo(Camera::class);
+    }
+
+
+    public function encheres(){
+        return $this->hasMany(Enchere::class);
     }
 
 

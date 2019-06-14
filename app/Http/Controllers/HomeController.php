@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Enchere;
 use App\Repositories\ImageRepository;
 
 class HomeController extends Controller
@@ -16,7 +17,12 @@ class HomeController extends Controller
     {
         $images = $repository->getAllImages ();
 
-        return view ('home', compact ('images'));
+        $encheres = Enchere::with('image')->get();
+
+
+
+
+        return view ('home', compact ('images', 'dernier_montant'));
     }
 
 
